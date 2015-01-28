@@ -18,7 +18,10 @@
 
 <!-- core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/gupiao.css" rel="stylesheet">
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/register.css" rel="stylesheet" type="text/css" />
+<link href="css/validator.css" rel="stylesheet" type="text/css" />
+
 <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -32,54 +35,7 @@
 	href="images/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
 	href="images/ico/apple-touch-icon-57-precomposed.png">
-<style>
-.banner {
-	position: relative;
-	overflow: auto;
-}
 
-.banner li {
-	list-style: none;
-}
-
-.banner ul li {
-	float: left;
-}
-
-.carousel .backcolor{
-	height:10%;
-	width:167px;
-	position:absolute;
-	display:inline;
-	float:right;
-	margin-left:63%;
-	margin-top:5%;
-	z-index: 10;
-	opacity:0.2;
-	background-color: #fff;
-}
-
-.carousel .panel{
-	height:10%;
-	width:167px;
-	position:absolute;
-	display:inline;
-	float:right;
-	margin-left:63%;
-	margin-top:5%;
-	z-index: 10;
-	text-align:center;
-	background: rgba(255, 255, 255, 0);
-}
-
-.carousel .panel .panel-heading{
-	background: rgba(255, 255, 255, 0.5);
-}
-
-.carousel .panel .panel-body{
-	background: rgba(255, 255, 255, 0.3);
-}
-</style>
 </head>
 <!--/head-->
 
@@ -116,54 +72,80 @@
 	</div>
 	<!-- /.container-fluid --> </nav> </header>
 
-	<section class="carousel"> <!-- Slideshow -->
-		<div id="carousel-example-generic" class="carousel slide"
-			data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="0"
-					class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			</ol>
-				<div class="backcolor"></div>
-				<div class="panel">
-					<div class="panel-heading">
-						<h1>5%-15% <br> <small>年化利率</small></h1>
-					</div>
-					<div class="panel-body">
-						<a class="btn btn-danger">立即注册</a>
-						<br><a>已有账号？马上登陆</a>
-					</div>
-				</div>
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<img src="images/index/index1.jpg">
-				</div>
-				<div class="item">
-					<img src="images/index/index2.jpg">
-				</div>
-				<div class="item">
-					<img src="images/index/index3.jpg">
+	<div class="container">
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputEmail3"
+						placeholder="请输入字母、数字或中文">
 				</div>
 			</div>
-	
-			<!-- Controls -->
-			<a class="left carousel-control" href="#carousel-example-generic"
-				role="button" data-slide="prev"> <span
-				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span
-				class="sr-only">Previous</span>
-			</a> <a class="right carousel-control" href="#carousel-example-generic"
-				role="button" data-slide="next"> <span
-				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-	</section>
+			<div class="form-group">
+				<label for="inputPassword1" class="col-sm-2 control-label">密码</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="inputPassword1"
+						placeholder="请输入6-20个数字+字母，区分大小写">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="inputPassword3"
+						placeholder="请再次输入密码">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputUsername" class="col-sm-2 control-label">推荐人</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputUsername"
+						placeholder="可输入用户名或手机号">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputMobile" class="col-sm-2 control-label">手机号码</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputMobile"
+						placeholder="手机号码">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputVal" class="col-sm-2 control-label">验证码</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputVal"
+						placeholder="验证码">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="inputVal1" class="col-sm-2 control-label">手机验证码</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="inputVal1"
+						placeholder="请输入短信验证码">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<div class="checkbox">
+						<label> <input type="checkbox"> Remember me
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">下一步</button>
+				</div>
+			</div>
+		</form>
+	</div>
 
 	<script src="js/jquery-2.0.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/registemember.js"></script>
+	<script src="js/bootstrapValidator.min.js"></script>
+	<script src="js/common.js"></script>
 	<script type="text/javascript">
 		$(function() {
 
