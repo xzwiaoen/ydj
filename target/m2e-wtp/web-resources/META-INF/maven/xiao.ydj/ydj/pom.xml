@@ -67,7 +67,9 @@
 			<version>${fastjson-version}</version>
 		</dependency>
 
-			<!-- dom4j 解析微信发来的xml -->
+		<!-- 微信开发包 -->
+
+		<!-- dom4j 解析微信发来的xml -->
 		<dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
@@ -85,22 +87,44 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.10</version>
 		</dependency>
-
-
-		<!-- 加入dom4j依赖包
 		<dependency>
-			<groupId>org.jvnet.hudson.dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>1.6.1-hudson-3</version>
+			<groupId>xpp3</groupId>
+			<artifactId>xpp3</artifactId>
+			<version>1.1.4c</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>3.0-alpha-1</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>jaxen</groupId>
-			<artifactId>jaxen</artifactId>
-			<version>1.1.4</version>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
 		</dependency>
- 		-->
- 		
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ning</groupId>
+			<artifactId>async-http-client</artifactId>
+			<version>1.8.13</version>
+			<!--<exclusions> <exclusion> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
+				</exclusion> <exclusion> <groupId>io.netty</groupId> <artifactId>netty</artifactId> 
+				</exclusion> </exclusions> -->
+		</dependency>
+		<!-- 微信开发包 -->
+
+
+		<!-- 加入dom4j依赖包 <dependency> <groupId>org.jvnet.hudson.dom4j</groupId> 
+			<artifactId>dom4j</artifactId> <version>1.6.1-hudson-3</version> </dependency> 
+			<dependency> <groupId>jaxen</groupId> <artifactId>jaxen</artifactId> <version>1.1.4</version> 
+			</dependency> -->
+
 		<!-- 加入jstl依赖包 -->
 		<dependency>
 			<groupId>jstl</groupId>
@@ -153,34 +177,14 @@
 			<version>${poi-version}</version>
 		</dependency>
 
-		<!-- dbutils依赖包 
-		<dependency>
-			<groupId>commons-dbutils</groupId>
-			<artifactId>commons-dbutils</artifactId>
-			<version>1.5</version>
-		</dependency>
--->
-		<!-- 加入javamelody依赖包
-		<dependency>
-			<groupId>net.bull.javamelody</groupId>
-			<artifactId>javamelody-core</artifactId>
-			<version>1.47.0</version>
-		</dependency>
- -->
-		<!-- 加入batik依赖包，用于highcharts导出图表
-		<dependency>
-			<groupId>org.apache.xmlgraphics</groupId>
-			<artifactId>batik-codec</artifactId>
-			<version>1.7</version>
-		</dependency>
- -->
-		<!-- 加入CXF依赖包 
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxws</artifactId>
-			<version>2.7.7</version>
-		</dependency>
--->
+		<!-- dbutils依赖包 <dependency> <groupId>commons-dbutils</groupId> <artifactId>commons-dbutils</artifactId> 
+			<version>1.5</version> </dependency> -->
+		<!-- 加入javamelody依赖包 <dependency> <groupId>net.bull.javamelody</groupId> 
+			<artifactId>javamelody-core</artifactId> <version>1.47.0</version> </dependency> -->
+		<!-- 加入batik依赖包，用于highcharts导出图表 <dependency> <groupId>org.apache.xmlgraphics</groupId> 
+			<artifactId>batik-codec</artifactId> <version>1.7</version> </dependency> -->
+		<!-- 加入CXF依赖包 <dependency> <groupId>org.apache.cxf</groupId> <artifactId>cxf-rt-frontend-jaxws</artifactId> 
+			<version>2.7.7</version> </dependency> -->
 		<!-- 加入spring mvc依赖包 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -246,13 +250,9 @@
 			<version>${struts-version}</version>
 		</dependency>
 		<!-- 可以看到struts2应用里的Action等各种资源的影射情况 -->
-		<!-- 可以使用类似http://localhost:9999/sshe/config-browser/showConstants.sy的url来访问
-		<dependency>
-			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-config-browser-plugin</artifactId>
-			<version>${struts-version}</version>
-		</dependency>
-		 -->
+		<!-- 可以使用类似http://localhost:9999/sshe/config-browser/showConstants.sy的url来访问 
+			<dependency> <groupId>org.apache.struts</groupId> <artifactId>struts2-config-browser-plugin</artifactId> 
+			<version>${struts-version}</version> </dependency> -->
 	</dependencies>
 	<build>
 		<plugins>
