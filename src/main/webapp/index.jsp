@@ -23,15 +23,6 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-<link rel="shortcut icon" href="images/ico/favicon.ico">
-<link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="images/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="images/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="images/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed"
-	href="images/ico/apple-touch-icon-57-precomposed.png">
 <style>
 .banner {
 	position: relative;
@@ -47,37 +38,73 @@
 }
 
 .carousel .backcolor{
-	height:10%;
-	width:167px;
+	height:13%;
+	width:180px;
 	position:absolute;
 	display:inline;
 	float:right;
 	margin-left:63%;
-	margin-top:5%;
+	margin-top:2%;
 	z-index: 10;
 	opacity:0.2;
 	background-color: #fff;
 }
 
 .carousel .panel{
-	height:10%;
-	width:167px;
+	height:13%;
+	width:180px;
 	position:absolute;
 	display:inline;
 	float:right;
 	margin-left:63%;
-	margin-top:5%;
+	margin-top:2%;
 	z-index: 10;
 	text-align:center;
 	background: rgba(255, 255, 255, 0);
 }
 
 .carousel .panel .panel-heading{
+	color:#FFF;
 	background: rgba(255, 255, 255, 0.5);
 }
 
 .carousel .panel .panel-body{
+	color:#FFF;
 	background: rgba(255, 255, 255, 0.3);
+}
+
+.table thead{
+	background-color: #cfcfcf;
+}
+
+#table tr td{
+	line-height: 28px;
+	margin:auto 0px;
+}
+#table .em{
+background-image: url(images/icon.png);
+width: 20px;
+height: 28px;
+display: block;
+overflow: hidden;
+float: left;
+padding-right: 3px;
+cursor: pointer;
+}
+
+#table .bao {
+background-position: 0px -270px;
+margin-right:3px;
+}
+
+#table .dan {
+background-position: -60px -270px;
+margin-right:3px;
+}
+
+#table .ti {
+background-position: -90px -270px;
+margin-right:3px;
 }
 </style>
 </head>
@@ -117,8 +144,7 @@
 	<!-- /.container-fluid --> </nav> </header>
 
 	<section class="carousel"> <!-- Slideshow -->
-		<div id="carousel-example-generic" class="carousel slide"
-			data-ride="carousel">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-example-generic" data-slide-to="0"
@@ -126,14 +152,14 @@
 				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 			</ol>
-				<div class="backcolor"></div>
-				<div class="panel">
+				<div class="panel hidden-sm hidden-xs">
 					<div class="panel-heading">
-						<h1>5%-15% <br> <small>年化利率</small></h1>
+						<h1>5%-15% <br><small>年化利率</small></h1>
+						
 					</div>
 					<div class="panel-body">
 						<a class="btn btn-danger">立即注册</a>
-						<br><a>已有账号？马上登陆</a>
+						<br><a href="#">已有账号？马上登陆</a>
 					</div>
 				</div>
 			<!-- Wrapper for slides -->
@@ -162,6 +188,56 @@
 		</div>
 	</section>
 
+	<section id="table">
+		<div class="container">
+		<div class="pannel">
+			<div class="panel-heading"><h3 class="text text-primary">投资项目</h3></div>
+			<div class="table-responsive">
+			  <table class="table table-condensed table-hover">
+			  		<thead>
+			  			<tr>
+			  				<th>项目</th>
+			  				<th>名称</th>
+			  				<th>融资金额</th>
+			  				<th>年化利率</th>
+			  				<th>期限</th>
+			  				<th>当前进度状态</th>
+			  			</tr>
+			  		</thead>
+			    	<tbody>
+			    			<tr>
+			    				<td><em class="em bao" title="投资保险计划"></em>
+			    					<em class="em dan" title="第三方担保"></em>益进宝150126-1 
+			    				</td>
+			    				<td>￥1,000,000.00</td>
+			    				<td>12.00%</td>
+			    				<td>3个月</td>
+			    				<td>1</td>
+			    				<td><button type="button" class="btn btn-primary">立即投标</button></td>
+			    			</tr>
+			    			<tr>
+			    				<td><em class="em bao" title="投资保险计划"></em>
+			    					<em class="em dan" title="第三方担保"></em>益进宝150126-1</td>
+			    				<td>￥1,000,000.00</td>
+			    				<td>12.00%</td>
+			    				<td>3个月</td>
+			    				<td>1</td>
+			    				<td><button type="button" class="btn btn-primary">立即投标</button></td>
+			    			</tr>
+			    			<tr>
+			    				<td><em class="em ti" title="体验标"></em>益进宝150126-1 </td>
+			    				<td>￥1,000,000.00</td>
+			    				<td>12.00%</td>
+			    				<td>3个月</td>
+			    				<td>1</td>
+			    				<td><button type="button" class="btn btn-primary">立即投标</button></td>
+			    			</tr>
+			    	</tbody>
+			  </table>
+			</div>
+		</div>
+		</div>
+	</section>
 	<script src="js/jquery-2.0.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
